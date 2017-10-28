@@ -11,7 +11,7 @@
                 </md-card-content>
                 <md-card-actions>
                     <md-button class="md-icon-button">
-                    <md-icon>favorite</md-icon>
+                    <i class="fa fa-leaf"></i>
                     </md-button> 200
                 </md-card-actions>
                 </md-card>
@@ -27,8 +27,8 @@
                 </md-card-content>
                 <md-card-actions>
                     <md-button class="md-icon-button">
-                    <md-icon>favorite</md-icon>
-                    </md-button> 200
+                    <i class="fa fa-leaf"></i>
+                    </md-button> 5
                 </md-card-actions>
                 </md-card>
             </md-layout>
