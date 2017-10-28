@@ -15,30 +15,30 @@
   import Users from '@/js/users'
 
   export default {
-    name: 'signup',
-    data () {
-      return {
-        form: {
-          pseudo: undefined
-        }
+      name: 'signup',
+      data () {
+          return {
+              form: {
+                  pseudo: undefined
+              }
+          }
+      },
+      beforeCreate: function () {
+          Users.init()
+      },
+      methods: {
+          signup: function () {
+              let self = this
+              if (typeof this.form.pseudo !== 'undefined' && this.form.pseudo !== '') {
+                  Users.create(this.form.pseudo).then(tx => {
+                      console.log(tx)
+                      self.$router.push('/')
+                  }).catch(err => {
+                      console.log(err)
+                  })
+              }
+          }
       }
-    },
-    beforeCreate: function () {
-      Users.init()
-    },
-    methods: {
-      signup: function () {
-        let self = this
-        if (typeof this.form.pseudo !== 'undefined' && this.form.pseudo !== '') {
-          Users.create(this.form.pseudo).then(tx => {
-            console.log(tx)
-            self.$router.push('/')
-          }).catch(err => {
-            console.log(err)
-          })
-        }
-      }
-    }
   }
 </script>
 
