@@ -67,6 +67,8 @@ export default {
                       this.pseudo = pseudo
                   })
               }
+          }).catch(err => {
+              console.log(err)
           })
       })
       .catch(err => {
