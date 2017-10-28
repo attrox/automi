@@ -3,4 +3,7 @@ Automi is an Ethereum based DApp that accelerates the velocity at which valuable
 
 ## Installation
 - npm install
+- Launch testrpc
+- truffle compile
+- truffle migrate
 - npm run start
